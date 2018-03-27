@@ -18,4 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+    <Button
+        android:id="@+id/matchingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:text="Matching"
+        app:layout_constraintStart_toStartOf="@+id/puzzleButton"
+        app:layout_constraintTop_toBottomOf="@+id/puzzleButton"
+        />
 </android.support.constraint.ConstraintLayout>

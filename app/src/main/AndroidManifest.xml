@@ -28,6 +28,10 @@
             android:label="@string/title_activity_choose_pic"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".matching.MatchingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
         <service android:name=".puzzle.bgm.MusicServer" />
 
     </application>
