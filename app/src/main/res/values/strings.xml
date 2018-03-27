@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">AutismKidsGame</string>
+
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_choose_pic">Choose pic</string>
+    <string name="title_activity_rank">Rank</string>
+    <string name="title_activity_personal">个人中心</string>
+    <string name="click_again_to_exit">再按一次返回键退出</string>
+    <string name="title_activity_change_pwd">修改密码</string>
+    <string name="default_time">00:00</string>
+
+    <!--设置界面 begin -->
+
+    <string name="setting_level">难度</string>
+    <string name="setting_adjust">调整游戏难度</string>
+    <string name="setting_makediff">使拼图块数量不同</string>
+    <string name="setting_about"> 关于 </string>
+    <string name="setting_copyright_cn">本游戏仅供娱乐学习使用，未经允许不得修改</string>
+    <string name="setting_copyright_en">Power by AndroidPuzzle and YouJoinStudio</string>
+    <string name="setting_level_3">3 X 3</string>
+    <string name="setting_level_4">4 X 4</string>
+    <string name="setting_level_5">5 X 5</string>
+    <string name="setting_level_6">6 X 6</string>
+    <string name="setting_share">我最近在玩 拼了个图 觉得不错，推荐你也下载来玩一下~</string>
+
+    <!--设置界面 end -->
 </resources>

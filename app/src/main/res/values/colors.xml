@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#ff9000</color>
+    <color name="colorPrimaryDark">#f27d00</color>
+    <color name="colorAccent">#dcdcdc</color>
+    <color name="mdarklight">#60ffffff</color>
+    <color name="mgreyshade">#30ffffff</color>
+    <color name="themeYellow">#ff9000</color>
+    <color name="themeGreen">#8ad520</color>
+    <color name="themeBlue">#3383e6</color>
+    <color name="themeBlueLight">#76a6e3</color>
+    <color name="themeRed">#eb3219</color>
+    <color name="background">#f5f5f5</color>
+    <color name="fontGrey">#8d8d8d</color>
+    <color name="settingBg">#ebebeb</color>
+    <color name="white">#ffffff</color>
+    <color name="dishGrey">#e0e0e0</color>
+    <color name="dishShadowGrey">#c4c4c4</color>
+    <color name="personGrey">#e6e6e6</color>
+    <color name="personGreyDark">#dcdcdc</color>
+    <color name="personTextColor">#b8b8b8</color>
+    <color name="personEditColor">#737373</color>
+    <color name="transparent">#00000000</color>
 </resources>
