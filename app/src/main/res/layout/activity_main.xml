@@ -1,31 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#424242"
     tools:context="humazed.github.com.autismkidsgame.MainActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp">
 
-    <Button
-        android:id="@+id/puzzleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Puzzle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        <ImageView
+            android:id="@+id/puzzleImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#84ffff"
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/matchingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="74dp"
-        android:text="Matching"
-        app:layout_constraintStart_toStartOf="@+id/puzzleButton"
-        app:layout_constraintTop_toBottomOf="@+id/puzzleButton"
-        />
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/puzzleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#03a9f4"
+            android:padding="16dp"
+            android:text="Complete the Pic"
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzleImageView"
+            app:layout_constraintEnd_toEndOf="@+id/puzzleImageView"
+            app:layout_constraintStart_toStartOf="@+id/puzzleImageView"/>
+
+        <ImageView
+            android:id="@+id/fitTheShapeImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#b9f6ca"
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#1de9b6"
+            android:padding="16dp"
+            android:text="Fit the right shape"
+            android:textColor="#616161"
+            app:layout_constraintBottom_toBottomOf="@+id/fitTheShapeImageView"
+            app:layout_constraintEnd_toEndOf="@+id/fitTheShapeImageView"
+            app:layout_constraintStart_toStartOf="@+id/fitTheShapeImageView"/>
+
+
+        <ImageView
+            android:id="@+id/drawImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#b388ff"
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleTextView"/>
+
+        <TextView
+            android:id="@+id/drawTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#7e57c2"
+            android:padding="16dp"
+            android:text="Draw"
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/drawImageView"
+            app:layout_constraintEnd_toEndOf="@+id/drawImageView"
+            app:layout_constraintStart_toStartOf="@+id/drawImageView"/>
+
+        <ImageView
+            android:id="@+id/findTheDiffImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ff8a80"
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+        <TextView
+            android:id="@+id/findTheDiffTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#ff5252"
+            android:padding="16dp"
+            android:text="Find the different"
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/findTheDiffImageView"
+            app:layout_constraintEnd_toEndOf="@+id/findTheDiffImageView"
+            app:layout_constraintStart_toStartOf="@+id/findTheDiffImageView"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

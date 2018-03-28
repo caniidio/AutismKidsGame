@@ -13,14 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        puzzleButton.setOnClickListener {
+        puzzleImageView.setOnClickListener {
             ChoosePicActivity.actionStart(this)
         }
 
 
-        matchingButton.setOnClickListener {
+        findTheDiffImageView.setOnClickListener {
             startActivity<MatchingActivity>()
+        }
+
+        drawImageView.setOnClickListener {
+
         }
 
     }
