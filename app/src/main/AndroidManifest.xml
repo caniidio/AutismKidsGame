@@ -20,18 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".puzzle.ui.GameActivity"
             android:label="@string/title_activity_game"
             android:theme="@style/AppTheme.NoActionBar"/>
-
         <activity
             android:name=".puzzle.ui.ChoosePicActivity"
             android:label="@string/title_activity_choose_pic"
             android:theme="@style/AppTheme.NoActionBar"/>
-
-
         <activity
             android:name=".draw.DrawActivity"
             android:label="@string/app_name"
@@ -52,7 +48,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".draw.DrawActivity"/>
         </activity>
-
         <activity
             android:name=".draw.JigsawHistoryActivity"
             android:label="@string/app_name"
@@ -62,12 +57,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".draw.DrawActivity"/>
         </activity>
-
         <activity
             android:name=".matching.MatchingActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
 
         <service android:name=".puzzle.bgm.MusicServer"/>
 
+        <activity android:name=".diff.DifferenceActivity">
+        </activity>
     </application>
+
 </manifest>
