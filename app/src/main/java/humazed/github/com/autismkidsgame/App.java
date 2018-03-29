@@ -6,6 +6,9 @@ import android.support.multidex.MultiDexApplication;
 
 import humazed.github.com.autismkidsgame.puzzle.dish.DishManager;
 import humazed.github.com.autismkidsgame.puzzle.utils.StaticValue;
+import humazed.github.com.kotlinandroidutils.LineNumberDebugTree;
+
+import static humazed.github.com.kotlinandroidutils.TimberKtKt.initTimber;
 
 
 /**
@@ -44,6 +47,9 @@ public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        initTimber(BuildConfig.DEBUG, null, new LineNumberDebugTree());
+
         if (mContext == null) mContext = getApplicationContext();
         SharedPreferences pref = getSharedPreferences(StaticValue.SP_NAME, MODE_PRIVATE);
         setLevel(pref.getInt(StaticValue.SP_LEVEL, 4));

@@ -71,12 +71,14 @@ class DifferenceActivity : AppCompatActivity() {
                             //                        .setMessage("Replay?")
                             //                        .setIcon(android.R.drawable.ic_dialog_alert)
                             .setPositiveButton(android.R.string.yes) { _, _ -> startActivity<MainActivity>() }
+                            .show()
                 } else {
                     AlertDialog.Builder(this@DifferenceActivity)
                             .setTitle("Wrong!!")
                             .setMessage("Choose again")
                             //                        .setIcon(android.R.drawable.ic_dialog_alert)
                             .setPositiveButton(android.R.string.yes) { dialog, which -> dialog.dismiss() }
+                            .show()
 
                 }
             }
