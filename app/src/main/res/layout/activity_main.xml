@@ -20,7 +20,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="#84ffff"
-            android:paddingBottom="50dp"
+            android:paddingBottom="55dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/puzzle"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -45,7 +47,9 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:background="#b9f6ca"
-            android:paddingBottom="50dp"
+            android:paddingBottom="55dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/fit_puzzle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -71,7 +75,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="#b388ff"
-            android:paddingBottom="50dp"
+            android:paddingBottom="55dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/puzzle_draw"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/puzzleTextView"/>
@@ -96,7 +102,9 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:background="#ff8a80"
-            android:paddingBottom="50dp"
+            android:paddingBottom="55dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/worldwide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/textView2"/>
