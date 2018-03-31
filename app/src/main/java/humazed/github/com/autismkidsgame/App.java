@@ -52,8 +52,16 @@ public class App extends MultiDexApplication {
 
         if (mContext == null) mContext = getApplicationContext();
         SharedPreferences pref = getSharedPreferences(StaticValue.SP_NAME, MODE_PRIVATE);
-        setLevel(pref.getInt(StaticValue.SP_LEVEL, 4));
+        setLevel(pref.getInt(StaticValue.SP_LEVEL, 3));
+        changeLevel();
     }
 
+    private void changeLevel() {
+        int level = 3;
+        SharedPreferences.Editor editor = getSharedPreferences(StaticValue.SP_NAME, MODE_PRIVATE).edit();
+        editor.putInt(StaticValue.SP_LEVEL, level);
+        editor.apply();
+        App.setLevel(level);
+    }
 
 }
