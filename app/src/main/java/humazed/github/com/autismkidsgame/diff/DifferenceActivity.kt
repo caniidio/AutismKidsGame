@@ -1,6 +1,7 @@
 package humazed.github.com.autismkidsgame.diff
 
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
@@ -14,6 +15,7 @@ import humazed.github.com.autismkidsgame.MainActivity
 import humazed.github.com.autismkidsgame.R
 import kotlinx.android.synthetic.main.activity_difference.*
 import org.jetbrains.anko.startActivity
+
 
 class DifferenceActivity : AppCompatActivity() {
 
@@ -63,6 +65,13 @@ class DifferenceActivity : AppCompatActivity() {
         picker.listener = object : BubblePickerListener {
             override fun onBubbleDeselected(item: PickerItem) {
                 if (item.title == "Ship") {
+                    val mp: MediaPlayer = MediaPlayer.create(this@DifferenceActivity, R.raw.applause)
+                    mp.setOnCompletionListener {
+                        it.reset()
+                        it.release()
+                    }
+                    mp.start()
+
                     AlertDialog.Builder(this@DifferenceActivity)
                             .setTitle("Puzzle Completed!!")
                             //                        .setMessage("Replay?")

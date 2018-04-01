@@ -1,5 +1,6 @@
 package humazed.github.com.autismkidsgame.matching
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -46,6 +47,13 @@ class MatchingActivity : AppCompatActivity() {
 
             startNextPuzzleGame()
         }
+
+        val mp: MediaPlayer = MediaPlayer.create(this@MatchingActivity, R.raw.applause)
+        mp.setOnCompletionListener {
+            it.reset()
+            it.release()
+        }
+        mp.start()
 
         channel!!.subscribe(PUZZLE_COMPLETED) {
             AlertDialog.Builder(this@MatchingActivity)
