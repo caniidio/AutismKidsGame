@@ -2,19 +2,19 @@
 <resources>
 
     <string-array name="countries">
-        <item>Argentina</item>
-        <item>Bolivia</item>
-        <item>Brazil</item>
-        <item>Chile</item>
-        <item>Costa Rica</item>
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Fish</item>
+        <item>Bird</item>
+        <item>Ship</item>
     </string-array>
 
     <integer-array name="images">
-        <item>@drawable/argentina</item>
-        <item>@drawable/bolivia</item>
-        <item>@drawable/brazil</item>
-        <item>@drawable/chile</item>
-        <item>@drawable/costa_rica</item>
+        <item>@drawable/dog</item>
+        <item>@drawable/cat</item>
+        <item>@drawable/fish</item>
+        <item>@drawable/bird</item>
+        <item>@drawable/ship</item>
         <item>@drawable/dominican_republic</item>
         <item>@drawable/mexico</item>
         <item>@drawable/nicaragua</item>

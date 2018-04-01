@@ -62,7 +62,7 @@ class DifferenceActivity : AppCompatActivity() {
         picker.bubbleSize = 60
         picker.listener = object : BubblePickerListener {
             override fun onBubbleDeselected(item: PickerItem) {
-                if (item.title == "Paraguay") {
+                if (item.title == "Ship") {
                     AlertDialog.Builder(this@DifferenceActivity)
                             .setTitle("Puzzle Completed!!")
                             //                        .setMessage("Replay?")
