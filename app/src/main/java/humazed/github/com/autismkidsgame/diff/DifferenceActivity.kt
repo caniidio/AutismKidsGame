@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
 import com.igalata.bubblepicker.BubblePickerListener
 import com.igalata.bubblepicker.adapter.BubblePickerAdapter
 import com.igalata.bubblepicker.model.BubbleGradient
@@ -18,15 +17,13 @@ import org.jetbrains.anko.startActivity
 
 class DifferenceActivity : AppCompatActivity() {
 
+    private val ROBOTO_BOLD = "roboto_bold.ttf"
+    private val ROBOTO_MEDIUM = "roboto_medium.ttf"
+    private val ROBOTO_REGULAR = "roboto_regular.ttf"
+
     private val boldTypeface by lazy { Typeface.createFromAsset(assets, ROBOTO_BOLD) }
     private val mediumTypeface by lazy { Typeface.createFromAsset(assets, ROBOTO_MEDIUM) }
     private val regularTypeface by lazy { Typeface.createFromAsset(assets, ROBOTO_REGULAR) }
-
-    companion object {
-        private const val ROBOTO_BOLD = "roboto_bold.ttf"
-        private const val ROBOTO_MEDIUM = "roboto_medium.ttf"
-        private const val ROBOTO_REGULAR = "roboto_regular.ttf"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +37,7 @@ class DifferenceActivity : AppCompatActivity() {
             hintTextView.letterSpacing = 0.05f
         }
 
-        val titles = resources.getStringArray(R.array.countries)
+        val titles: Array<String> = resources.getStringArray(R.array.countries)
         val colors = resources.obtainTypedArray(R.array.colors)
         val images = resources.obtainTypedArray(R.array.images)
 
@@ -62,7 +59,7 @@ class DifferenceActivity : AppCompatActivity() {
         colors.recycle()
         images.recycle()
 
-        picker.bubbleSize = 20
+        picker.bubbleSize = 60
         picker.listener = object : BubblePickerListener {
             override fun onBubbleDeselected(item: PickerItem) {
                 if (item.title == "Paraguay") {
@@ -102,6 +99,4 @@ class DifferenceActivity : AppCompatActivity() {
         super.onPause()
         picker.onPause()
     }
-
-    private fun toast(text: String) = Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 }
