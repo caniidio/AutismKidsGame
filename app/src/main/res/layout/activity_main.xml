@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:background="#ff5252"
             android:padding="16dp"
-            android:text="Find the object"
+            android:text="Find the strange object"
             android:textColor="#ffffffff"
             app:layout_constraintBottom_toBottomOf="@+id/findTheDiffImageView"
             app:layout_constraintEnd_toEndOf="@+id/findTheDiffImageView"

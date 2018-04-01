@@ -2,8 +2,8 @@ package humazed.github.com.autismkidsgame.matching
 
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import com.afollestad.materialdialogs.MaterialDialog
 import com.bakrabros.android.puzzle.channel.Channel
 import com.bakrabros.android.puzzle.constant.PuzzleEvents.PUZZLE_COMPLETED
 import com.bakrabros.android.puzzle.constant.PuzzleEvents.SHOW_NEXT_PUZZLE_PIECE
@@ -48,19 +48,23 @@ class MatchingActivity : AppCompatActivity() {
             startNextPuzzleGame()
         }
 
-        val mp: MediaPlayer = MediaPlayer.create(this@MatchingActivity, R.raw.applause)
-        mp.setOnCompletionListener {
-            it.reset()
-            it.release()
-        }
-        mp.start()
+        channel?.subscribe(PUZZLE_COMPLETED) {
+            val mp: MediaPlayer = MediaPlayer.create(this@MatchingActivity, R.raw.applause)
+            mp.setOnCompletionListener {
+                it.reset()
+                it.release()
+            }
+            mp.start()
 
-        channel!!.subscribe(PUZZLE_COMPLETED) {
-            AlertDialog.Builder(this@MatchingActivity)
-                    .setTitle("Puzzle Completed!!")
-                    //                        .setMessage("Replay?")
-                    //                        .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setPositiveButton(android.R.string.yes) { dialog, whichButton -> startNextPuzzleGame() }.show()
+            MaterialDialog.Builder(this@MatchingActivity)
+                    .title("Puzzle Completed!!")
+                    .iconRes(R.drawable.clap)
+                    .positiveText(android.R.string.yes)
+                    .onAny { dialog, which -> startNextPuzzleGame() }
+                    .show()
+            //                        .setMessage("Replay?")
+            //                        .setIcon(android.R.drawable.ic_dialog_alert)
+//                    .setPositiveButton(android.R.string.yes) { dialog, whichButton -> startNextPuzzleGame() }.show()
         }
     }
 

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import com.afollestad.materialdialogs.MaterialDialog
 import com.igalata.bubblepicker.BubblePickerListener
 import com.igalata.bubblepicker.adapter.BubblePickerAdapter
 import com.igalata.bubblepicker.model.BubbleGradient
@@ -72,11 +73,11 @@ class DifferenceActivity : AppCompatActivity() {
                     }
                     mp.start()
 
-                    AlertDialog.Builder(this@DifferenceActivity)
-                            .setTitle("Puzzle Completed!!")
-                            //                        .setMessage("Replay?")
-                            //                        .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setPositiveButton(android.R.string.yes) { _, _ -> startActivity<MainActivity>() }
+                    MaterialDialog.Builder(this@DifferenceActivity)
+                            .title("Puzzle Completed!!")
+                            .iconRes(R.drawable.clap)
+                            .positiveText(android.R.string.yes)
+                            .onAny { dialog, which -> startActivity<MainActivity>() }
                             .show()
                 } else {
                     AlertDialog.Builder(this@DifferenceActivity)
